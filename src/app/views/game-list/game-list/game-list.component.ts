@@ -25,8 +25,8 @@ export class GameListComponent implements OnInit {
   }
 
   public navigateToGameById(id: number): void{
-    //this.router.navigate(["/gameView",id]);
-    console.log(id);
+    this.router.navigate(["home/game",id]);
+    //console.log(id);
   }
 
 }
