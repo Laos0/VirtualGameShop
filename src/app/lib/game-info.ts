@@ -5,6 +5,7 @@ export class GameInfo{
 
     // doiing this way will allow us to bypass doing this.title = title in the constructor 
     constructor(
+        public id: number,
         public title: String, 
         public description: String,
         public numberOfPlayers: number,

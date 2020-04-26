@@ -1,0 +1,8 @@
+<div>
+    <div class="gameDisplay" *ngFor="let game of getGameInfos(); index as i;"> 
+        <div (click)="navigateToGameById(game.id)">
+            <span>{{game.title}}</span>
+            <img src="{{game.imagePath}}">
+        </div>
+    </div>
+</div>

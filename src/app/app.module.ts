@@ -7,6 +7,8 @@ import { GameViewComponent } from './views/game-view/game-view.component';
 import { GameContainerComponent } from './views/game-container/game-container.component';
 import { HeaderComponent } from './views/header/header/header.component';
 import { FooterComponent } from './views/footer/footer/footer.component';
+import { SearchBarComponent } from './views/search-bar/search-bar.component';
+import { GameListComponent } from './views/game-list/game-list/game-list.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { FooterComponent } from './views/footer/footer/footer.component';
     GameViewComponent,
     GameContainerComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchBarComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,

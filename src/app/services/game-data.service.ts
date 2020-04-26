@@ -18,6 +18,7 @@ export class GameDataService {
     const data = 
     [
       {
+        id: 1,
         title: "Monster Hunter World",
         description: "Kill monsters",
         numberOfPlayers: 1,
@@ -29,9 +30,10 @@ export class GameDataService {
         rating: 10,
         price: 59.99,
         publisher: "Capcom",
-        imagePath: "asset/images/mhw.jpg"
+        imagePath: "assets/images/mhw.jpeg"
       },
       {
+        id: 2,
         title: "Resident Evil 3 Remake",
         description: "Kill Zombie",
         numberOfPlayers: 1,
@@ -43,13 +45,14 @@ export class GameDataService {
         rating: 10,
         price: 59.99,
         publisher: "Capcom",
-        imagePath: "asset/images/mhw.jpg"
+        imagePath: "assets/images/mhw.jpeg"
       },
     ];
 
     // parse json
     data.forEach(game => {
       const gameInfo: GameInfo = new GameInfo(
+        game.id,
         game.title,
         game.description,
         game.numberOfPlayers,
