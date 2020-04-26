@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GameInfo } from './lib/game-components/game-info'; // how to import a class
+import { GameDataService } from './services/game-data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,7 @@ import { GameInfo } from './lib/game-components/game-info'; // how to import a c
 export class AppComponent {
   public title: String = 'app';
 
-  public gameInfos: GameInfo[] = [];
-
   constructor(){
-    const game:GameInfo = new GameInfo("MHW", 5, "Kill monsters");
-    this.gameInfos.push(game);
+    
   }
 }

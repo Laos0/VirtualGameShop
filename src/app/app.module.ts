@@ -4,11 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameViewComponent } from './views/game-view/game-view.component';
+import { GameContainerComponent } from './views/game-container/game-container.component';
+import { HeaderComponent } from './views/header/header/header.component';
+import { FooterComponent } from './views/footer/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameViewComponent
+    GameViewComponent,
+    GameContainerComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

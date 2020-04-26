@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameInfo } from '../../lib/game-components/game-info';
+import { GameInfo } from '../../lib/game-info';
 
 @Component({
   selector: 'app-game-view',
@@ -15,7 +15,7 @@ export class GameViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.gameInfo = new GameInfo("RE", 7, "Kill zombies");
+    
   }
 
 }
