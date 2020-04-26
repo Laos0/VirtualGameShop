@@ -6,6 +6,8 @@ import { GameInfo } from '../lib/game-info';
 })
 export class GameDataService {
   public gameInfos: GameInfo[] = []; // array of loaded gameInfo objects
+  public filterGameInfos: GameInfo[] = []; // for filter game
+  public targetGameInfos: GameInfo[] = []; // point to filter you want to see
 
   constructor() 
   {
@@ -70,6 +72,34 @@ export class GameDataService {
         this.gameInfos.push(gameInfo);
     });
 
+  }
+
+  public getGameById(id: number): GameInfo{
+
+    let game:GameInfo = null;
+
+    console.log("Searching by id: " + id);
+
+    if(id >= 0){
+
+      if(this.gameInfos && this.gameInfos.length){
+        game = this.gameInfos.find(x => x.id === id);
+        
+        if(!game){
+          console.warn("<< game-data.service >> : getGameById() fail, game is null");
+        }
+      }else{
+
+        console.warn("<< game-data.service >> : array is invalid");
+      }
+
+    }else{
+
+      console.warn("<< game-data.service >> : id is invalid");
+    }
+
+    
+    return game;
   }
 
 
