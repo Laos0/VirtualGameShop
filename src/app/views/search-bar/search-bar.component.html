@@ -1,3 +1,20 @@
 <div class="topnav">
-    <input type="text" placeholder="Search game by title" #textInput [formControl]="searchTextInput">
+
+    <div>
+        <input type="text" placeholder="Search game by title" #textInput [formControl]="searchTextInput">
+    </div>
+
+    <div>
+        <span>Filter game by genre</span> <br>
+        <select [formControl]="genreInput">
+            <option value="">None</option>
+            <option value="action">Action</option>
+            <option value="rpg">RPG</option>
+            <option value="fps">FPS</option>
+            <option value="mmorpg">MMORPG</option>
+            <option value="adventure">Adventure</option>
+            <option value="shooting">Shooting</option>
+        </select>
+
+    </div>
 </div>

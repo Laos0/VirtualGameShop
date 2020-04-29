@@ -43,12 +43,103 @@ export class GameDataService {
         releaseYear: 2018,
         releaseMonth: 1,
         releaseDay: 10,
-        genre: "Action, RPG",
+        genre: "Shooting",
         rating: 10,
         price: 59.99,
         publisher: "Capcom",
         imagePath: "assets/images/re3.jpeg"
       },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+      {
+        id: 2,
+        title: "Resident Evil 3 Remake",
+        description: "Kill Zombie",
+        numberOfPlayers: 1,
+        online: true,
+        releaseYear: 2018,
+        releaseMonth: 1,
+        releaseDay: 10,
+        genre: "Shooting",
+        rating: 10,
+        price: 59.99,
+        publisher: "Capcom",
+        imagePath: "assets/images/re3.jpeg"
+      },
+
     ];
 
     // parse json
@@ -119,6 +210,20 @@ export class GameDataService {
     }
 
 
+  }
+
+  public filterGamesByGenre(genre: string): void{
+    this.filterGameInfos = [];
+
+    if(genre){
+
+      this.filterGameInfos = this.gameInfos.filter(g => g.genre.toUpperCase().includes(genre.toUpperCase()));
+      this.targetGameInfos = this.filterGameInfos;
+      console.log("A");
+    }else{
+      this.targetGameInfos = this.gameInfos;
+      console.log("b");
+    }
   }
 
 

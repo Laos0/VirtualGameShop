@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from 'src/app/services/game-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-container',
@@ -8,9 +9,18 @@ import { GameDataService } from 'src/app/services/game-data.service';
 })
 export class GameContainerComponent implements OnInit {
 
-  constructor(private gameService: GameDataService) { }
+  public showSearchBar: boolean = true;
+  constructor(private gameService: GameDataService, private router: Router) { }
 
   ngOnInit(): void {
+    this.router.events.subscribe(v => {
+      console.log(this.router.url);
+      if(this.router.url.includes("/home/game/")){
+        this.showSearchBar = false;
+      }else{
+        this.showSearchBar = true;
+      }
+    })
   }
 
 }

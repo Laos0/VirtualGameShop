@@ -1,5 +1,7 @@
 <div>
-    <app-search-bar></app-search-bar>
+    <div *ngIf="showSearchBar">
+        <app-search-bar></app-search-bar>
+    </div>
     <!-- <app-game-list></app-game-list> -->
     <router-outlet></router-outlet>
 </div>

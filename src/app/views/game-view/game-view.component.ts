@@ -27,6 +27,7 @@ export class GameViewComponent implements OnInit {
 
    const id: number = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
    this.gameInfo = this.gameService.getGameById(id);
+
   }
 
 }
