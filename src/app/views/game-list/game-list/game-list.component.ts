@@ -19,9 +19,11 @@ export class GameListComponent implements OnInit {
    * return gameInfos array
    */
   public getGameInfos(): GameInfo[]{
-    if(this.gameService){
-      return this.gameService.gameInfos;
+    if(this.gameService && this.gameService.targetGameInfos){
+      return this.gameService.targetGameInfos;
+    
     }
+
   }
 
   public navigateToGameById(id: number): void{

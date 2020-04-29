@@ -47,7 +47,7 @@ export class GameDataService {
         rating: 10,
         price: 59.99,
         publisher: "Capcom",
-        imagePath: "assets/images/mhw.jpeg"
+        imagePath: "assets/images/re3.jpeg"
       },
     ];
 
@@ -70,6 +70,7 @@ export class GameDataService {
         );
 
         this.gameInfos.push(gameInfo);
+        this.targetGameInfos = this.gameInfos;
     });
 
   }
@@ -100,6 +101,24 @@ export class GameDataService {
 
     
     return game;
+  }
+
+  /**
+   * 
+   * @param title 
+   */
+  public filterGamesByTitle(titlePrefix: string): void{
+    this.filterGameInfos = [];
+
+    if(titlePrefix){
+
+      this.filterGameInfos = this.gameInfos.filter(g => g.title.toUpperCase().includes(titlePrefix.toUpperCase()));
+      this.targetGameInfos = this.filterGameInfos;
+    }else{
+      this.targetGameInfos = this.gameInfos;
+    }
+
+
   }
 
 

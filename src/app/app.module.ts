@@ -9,6 +9,7 @@ import { HeaderComponent } from './views/header/header/header.component';
 import { FooterComponent } from './views/footer/footer/footer.component';
 import { SearchBarComponent } from './views/search-bar/search-bar.component';
 import { GameListComponent } from './views/game-list/game-list/game-list.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { GameListComponent } from './views/game-list/game-list/game-list.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

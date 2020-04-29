@@ -1,4 +1,20 @@
 
-<div>
-    {{gameInfo.title}}
+<div class="container">
+    
+    <img src="{{gameInfo.imagePath}}">
+    <div class="gameInformation">
+        Id: {{gameInfo.id}} <br>
+        Title: {{gameInfo.title}} <br>
+        Description: {{gameInfo.description}} <br>
+        Max Players: {{gameInfo.numberOfPlayers}} <br>
+        Online: {{gameInfo.online}} <br>
+        Release Year: {{gameInfo.releaseYear}} <br>
+        Release Month: {{gameInfo.releaseMonth}} <br>
+        Release Day: {{gameInfo.releaseDay}} <br>
+        Genre: {{gameInfo.genre}} <br>
+        Rating: {{gameInfo.rating}} <br>
+        Price: {{gameInfo.price}} <br>
+        Publisher: {{gameInfo.publisher}} <br>
+    </div>
 </div>
+
