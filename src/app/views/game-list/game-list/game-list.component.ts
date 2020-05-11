@@ -13,6 +13,7 @@ export class GameListComponent implements OnInit {
   constructor(private gameService: GameDataService, private router: Router) {}
 
   ngOnInit(): void {
+    this.resetNoFilter();
   }
 
   /**
@@ -29,6 +30,11 @@ export class GameListComponent implements OnInit {
   public navigateToGameById(id: number): void{
     this.router.navigate(["home/game",id]);
     //console.log(id);
+  }
+
+  public resetNoFilter(): void{
+    this.gameService.filterGamesByTitle("");
+    this.router.navigate(["home"]);
   }
 
 }

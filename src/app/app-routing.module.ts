@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: 'home', component: GameContainerComponent, 
     children: [
       {path:'', component: GameListComponent},
-      {path:'game/:id', component: GameViewComponent}
+      {path:'game/:id', component: GameViewComponent},
+      
     ]
   },
   {path: '', redirectTo: '/home', pathMatch: 'full'}
